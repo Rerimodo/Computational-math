@@ -17,7 +17,6 @@ public class Gauss {
     public Gauss(){
         size = 1;
         matrix = new double[size+1][size];
-//        original = new double[size+1][size];
         solutions = new double[size];
         error = new double[size];
         temp = new double[size+1][];
@@ -25,7 +24,6 @@ public class Gauss {
     
     public Gauss(double [][] matrix){
         this.matrix = matrix;
-//        original = matrix;
         size = matrix.length-1;
         solutions = new double[size];
         error = new double[size];
@@ -123,7 +121,6 @@ public class Gauss {
     public void setSize(int s){
         this.size = s;
         matrix=new double[size+1][size];
-//        original=new double[size+1][size];
         for(int i=0;i<=size;i++){
             for(int j=0;j<=size-1;j++){
                 setElement(i,j,0.0);
@@ -153,7 +150,6 @@ public class Gauss {
                         sb.setLength(0);
                         size = Integer.parseInt(values[0]);
                         matrix=new double[size+1][size];
-//                        original = new double[size+1][size];
                         solutions = new double[size];
                         error = new double[size];
                         temp = new double[size+1][];
@@ -181,7 +177,6 @@ public class Gauss {
     
     public void setElement(int i, int j, double e){
         matrix[i][j]=e;
-//        original[i][j]=e;
     }
     
     public void fill(int x, int y){
@@ -203,18 +198,6 @@ public class Gauss {
             }
         }
     }
-    
-//    public String showOriginal(){
-//        StringBuilder sb = new StringBuilder();
-//        for(int y = 0; y < size; y++){
-//            for(int x = 0; x < size+1; x++){
-//                sb.append(original[x][y]);
-//                sb.append('\t');
-//            }
-//            sb.append('\n');
-//        }
-//        return sb.toString();
-//    }
     
     @Override
     public String toString(){

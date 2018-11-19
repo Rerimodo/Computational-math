@@ -11,7 +11,6 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
-//    private static Gauss g;
     public static void main(String args[]){
         Gauss g = new Gauss();
         modeSelect(g);
@@ -55,10 +54,7 @@ public class Main {
                 System.out.println("\nТреугольная матрица\n"+g);
                 double[] sol = g.solve();
                 double[] err = g.errors();
-                for(int i = 0; i < sol.length; i++){
-//                            System.out.println("X" + i + " = " + sol[i] + "\tError is " + err[i]);
-                    System.out.printf("X%1$d = %2$.10f \tПогрешность равна %3$.40f\n",i+1,sol[i],err[i]);
-                }
+                for(int i=0; i < sol.length; i++) System.out.printf("X%1$d = %2$.10f \tПогрешность равна %3$.40f\n",i+1,sol[i],err[i]);
             } catch(Exception e){
                 System.out.println("Матрица не заполнена");
             }
@@ -88,10 +84,7 @@ public class Main {
                 System.out.println("\nТреугольная матрица\n"+g);
                 double[] sol = g.solve();
                 double[] err = g.errors();
-                for(int i = 0; i < sol.length; i++){
-//                            System.out.println("X" + i + " = " + sol[i] + "\tError is " + err[i]);
-                    System.out.printf("X%1$d = %2$.10f \tПогрешность равна %3$.40f\n",i+1,sol[i],err[i]);
-                }
+                for(int i = 0; i < sol.length; i++)System.out.printf("X%1$d = %2$.10f \tПогрешность равна %3$.40f\n",i+1,sol[i],err[i]);
             } catch(Exception e){
                 System.out.println("Матрица не заполнена");
             }
@@ -121,9 +114,7 @@ public class Main {
                 System.out.println("\nТреугольная матрица\n"+g);
                 double[] sol = g.solve();
                 double[] err = g.errors();
-                for(int i = 0; i < sol.length; i++){
-//                            System.out.println("X" + i + " = " + sol[i] + "\tError is " + err[i]);
-                    System.out.printf("X%1$d = %2$.10f \tПогрешность равна %3$.40f\n",i+1,sol[i],err[i]);
+                for(int i = 0; i < sol.length; i++)System.out.printf("X%1$d = %2$.10f \tПогрешность равна %3$.40f\n",i+1,sol[i],err[i]);
                 }
             } catch(Exception e){
                 System.out.println("Матрица не заполнена");
